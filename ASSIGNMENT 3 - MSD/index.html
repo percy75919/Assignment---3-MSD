@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="container">
+        <p id="text" class="animate-text">Do what GOD leads you to do</p>
+        <button id="changeButton" class="animate-button" onclick="toggleState()">Click Me</button>
+    </div>
+
+    <script>
+        let isOriginal = true;
+
+        function toggleState() {
+            const text = document.getElementById('text');
+            const button = document.getElementById('changeButton');
+            const container = document.querySelector('.container');
+
+            if (isOriginal) {
+                text.innerHTML = "Not what the world wants you to do!";
+                button.innerHTML = "Click to Reset";
+                container.style.backgroundColor = "rgba(204, 153, 255, 0.8)"; /* Light purple */
+            } else {
+                text.innerHTML = "Do what GOD leads you to do";
+                button.innerHTML = "Click Me";
+                container.style.backgroundColor = "rgba(255, 255, 255, 0.8)"; /* Light white */
+            }
+
+            isOriginal = !isOriginal;
+        }
+    </script>
+</body>
+</html>
